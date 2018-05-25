@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Projeto_Inter.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="Styles/Style_Home.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+
+    <title>Home</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    
+    <form id="login" runat="server">
+                <asp:Label ID="Label1" runat="server" Text="Usuário Logado: "></asp:Label>
+        <asp:Label ID="lblUsuarioLogado" runat="server" Text="user"></asp:Label>
+&nbsp;-
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <asp:Button ID="btnFuncionarios" runat="server" Text="Funcionários" CssClass="btn btn-secondary" OnClick="btnFuncionarios_Click" />
+            <asp:Button ID="btnFornecedores" runat="server" Text="Fornecedores" CssClass="btn btn-secondary" OnClick="btnFornecedores_Click" />
+            <asp:Button ID="btnCadProd" runat="server" Text="Cadastro de Produtos" CssClass="btn btn-secondary" OnClick="btnCadProd_Click" />
+            <asp:Button ID="btnPesquisa" runat="server" Text="Pesquisa de Produtos" CssClass="btn btn-secondary" OnClick="btnPesquisa_Click" />
+            <asp:Button ID="btnReq" runat="server" Text="Requisições" CssClass="btn btn-secondary" OnClick="btnReq_Click" />
+            <asp:Button ID="btnCotacao" runat="server" Text="Cotações" CssClass="btn btn-secondary" OnClick="btnCotacao_Click" />
+            <asp:Button ID="btnCompras" runat="server" Text="Compras" CssClass="btn btn-secondary" OnClick="btnCompras_Click" />
+            <br />
+            <br />
+        </div>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+        </asp:ContentPlaceHolder>        
+    </div>
+    </form>
+</body>
+</html>
