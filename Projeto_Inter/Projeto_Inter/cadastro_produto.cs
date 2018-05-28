@@ -14,11 +14,20 @@ namespace Projeto_Inter
     
     public partial class cadastro_produto
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public cadastro_produto()
+        {
+            this.requisicao = new HashSet<requisicao>();
+        }
+    
         public int id { get; set; }
         public string descricao { get; set; }
         public string marcaitem { get; set; }
         public string unidademedida { get; set; }
         public string departamento { get; set; }
         public System.DateTime datacadastro { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<requisicao> requisicao { get; set; }
     }
 }

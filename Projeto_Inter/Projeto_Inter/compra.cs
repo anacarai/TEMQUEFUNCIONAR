@@ -22,5 +22,9 @@ namespace Projeto_Inter
         public string funcionarioaprov { get; set; }
         public string prazo { get; set; }
         public string pagamento { get; set; }
+        public int idrequisicao { get; set; }
+    
+        public virtual cotacao cotacao { get; set; }
+        public virtual requisicao requisicao { get; set; }
     }
 }

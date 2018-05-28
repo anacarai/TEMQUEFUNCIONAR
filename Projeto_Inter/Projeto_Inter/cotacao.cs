@@ -14,6 +14,12 @@ namespace Projeto_Inter
     
     public partial class cotacao
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public cotacao()
+        {
+            this.compra = new HashSet<compra>();
+        }
+    
         public int idcotacao { get; set; }
         public System.DateTime datacotacao { get; set; }
         public int idreq { get; set; }
@@ -22,9 +28,11 @@ namespace Projeto_Inter
         public string departamento { get; set; }
         public string valor { get; set; }
         public string funcionarioaprov { get; set; }
+        public int idfuncionario { get; set; }
     
-        public virtual cotacao cotacao1 { get; set; }
-        public virtual cotacao cotacao2 { get; set; }
+        public virtual cadastro_funcionario cadastro_funcionario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<compra> compra { get; set; }
         public virtual requisicao requisicao { get; set; }
     }
 }

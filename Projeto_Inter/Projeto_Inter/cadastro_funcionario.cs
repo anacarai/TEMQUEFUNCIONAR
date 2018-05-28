@@ -14,10 +14,17 @@ namespace Projeto_Inter
     
     public partial class cadastro_funcionario
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public cadastro_funcionario()
+        {
+            this.cotacao = new HashSet<cotacao>();
+            this.requisicao = new HashSet<requisicao>();
+        }
+    
         public int id { get; set; }
         public string nome { get; set; }
-        public int cpf { get; set; }
-        public int rg { get; set; }
+        public string cpf { get; set; }
+        public string rg { get; set; }
         public string telefone { get; set; }
         public string email { get; set; }
         public string cep { get; set; }
@@ -29,5 +36,10 @@ namespace Projeto_Inter
         public string cargo { get; set; }
         public string departamento { get; set; }
         public System.DateTime datacadastro { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<cotacao> cotacao { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<requisicao> requisicao { get; set; }
     }
 }

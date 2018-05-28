@@ -30,7 +30,7 @@
         </div>
         <div class="col-2">
     <asp:Label ID="Label6" runat="server" Text="Unidade de Medida"></asp:Label>
-    <asp:RequiredFieldValidator ID="ValidatorUnidadeMedida" runat="server" ControlToValidate="txtUnMedida" ErrorMessage="Campo &quot;Unidade de Medida&quot; não informado!" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="ValidatorUnidadeMedida" runat="server" ControlToValidate="ddlUnidadeMedida" ErrorMessage="Campo &quot;Unidade de Medida&quot; não informado!" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
             <br />
             <asp:DropDownList ID="ddlUnidadeMedida" runat="server">
                 <asp:ListItem>PEÇA</asp:ListItem>
