@@ -13,7 +13,7 @@ namespace Projeto_Inter
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           // CarregarTabela();
+            CarregarTabela();
         }
 
         public void CarregarTabela()

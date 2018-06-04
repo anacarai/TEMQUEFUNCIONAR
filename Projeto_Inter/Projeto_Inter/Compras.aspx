@@ -2,12 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
+        <br />
     <div class="row">
-        <div class="col-5">
+        <div class="col-4">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="validacao" />
     <asp:Label ID="NumCotacao" runat="server" Text="Nº Cotação"></asp:Label>
     <asp:RequiredFieldValidator ID="ValidatorCotacao" runat="server" ControlToValidate="txtNumero" ErrorMessage="O campo &quot;Nº cotação&quot; não foi informado " ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
-    <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" placeholder="Entre com o número da cotação:" Width="176px"></asp:TextBox>
+    <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control"  Width="250px" placeholder="Entre com o número da cotação:"></asp:TextBox>
     </div>
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click" ValidationGroup="validacao" />
     </div><br />
@@ -47,8 +49,8 @@
     <asp:Label ID="Label7" runat="server" Text="Departamento"></asp:Label>
     <asp:TextBox ID="txtDepartamento" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
     <asp:Label ID="Label8" runat="server" Text="Funcionário Aprovador"></asp:Label>
-            </div></div>
     <asp:TextBox ID="txtFuncAprov" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+        </div></div>
     <br />
 
     <div class="form-group">
@@ -65,8 +67,6 @@
     <asp:CheckBox ID="cbDinheiro" runat="server" Text="Dinheiro" />
     <asp:CheckBox ID="cbCheque" runat="server" Text="Cheque" />
     <asp:CheckBox ID="cbDeposito" runat="server" Text="Depósito" />
-    </fieldset>
-
     <asp:CheckBox ID="cbBoleto" runat="server" Text="Boleto" />
 
     <br />
@@ -74,4 +74,5 @@
 
     <button type="button" class="btn btn-secondary"> Confirmar compra</button>
 
+        </div>
 </asp:Content>

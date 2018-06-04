@@ -3,22 +3,35 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
+    <center>
     <asp:Label ID="Label4" runat="server" Text="Pesquisar"></asp:Label>
-    <asp:TextBox ID="txtPesquisar" runat="server" CssClass="form-control" ></asp:TextBox>
+    <asp:TextBox ID="txtPesquisar" runat="server"  Width="600px" CssClass="form-control" ></asp:TextBox>
+        <br />
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar"  CssClass="btn btn-secondary" OnClick="btnBuscar_Click" />
+    </center>
     <br />
     <br />
     <asp:Label ID="Label3" runat="server" Text="Lista de Materiais"></asp:Label>
     <hr />
-    <asp:GridView ID="gridMateriais" runat="server" CellPadding="2" ForeColor="Black" GridLines="None" Height="187px" Width="764px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" AllowPaging="True" AllowSorting="True">
-        <AlternatingRowStyle BackColor="PaleGoldenrod" />
-        <FooterStyle BackColor="Tan" />
-        <HeaderStyle BackColor="Tan" Font-Bold="True" />
-        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
-        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-        <SortedAscendingCellStyle BackColor="#FAFAE7" />
-        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
-        <SortedDescendingCellStyle BackColor="#E1DB9C" />
-        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+    <center>
+    <asp:GridView ID="gridMateriais" runat="server" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="187px" Width="764px" BackColor="White" BorderColor="#DEDFDE" BorderWidth="1px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="None">
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="id" HeaderText="ID" />
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="descricao" HeaderText="Descrição" />
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="marcaitem" HeaderText="Marca" />
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="unidademedida" HeaderText="Unidade de Medida" />
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="departamento" HeaderText="Departamento" />
+        </Columns>
+        <FooterStyle BackColor="#CCCC99" />
+        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+        <RowStyle BackColor="#F7F7DE" />
+        <SelectedRowStyle BackColor="#CE5D5A" ForeColor="White" Font-Bold="True" />
+        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+        <SortedAscendingHeaderStyle BackColor="#848384" />
+        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+        <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
+    </center>
 </asp:Content>

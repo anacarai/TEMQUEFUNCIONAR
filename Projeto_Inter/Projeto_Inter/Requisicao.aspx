@@ -30,7 +30,7 @@
         <br />
               
     <div class="row">
-    <div class="col-2">
+    <div class="col-6">
     <asp:Label ID="Label7" runat="server" Text="Descrição"></asp:Label>
     <asp:TextBox ID="txtDescricao" runat="server"  CssClass="form-control" ReadOnly="True" Width="400px"></asp:TextBox>
     </div>
