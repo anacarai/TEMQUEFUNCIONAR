@@ -32,7 +32,6 @@ namespace Projeto_Inter
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
             txtCargo.Text = string.Empty;
-            //txtDepartamento.Text = string.Empty;
             txtDataCadastro.Text = string.Empty;
         }
 
@@ -63,7 +62,6 @@ namespace Projeto_Inter
                 funcionario.bairro = txtBairro.Text;
                 funcionario.cidade = txtCidade.Text;
                 funcionario.cargo = txtCargo.Text;
-                //funcionario.departamento = txtDepartamento.Text;
                 funcionario.departamento = ddlDepartamento.DataTextField;
                 funcionario.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
 
@@ -71,7 +69,6 @@ namespace Projeto_Inter
                 entity.SaveChanges();
                 CarregarTabela();
                 LimparCampos();
-            
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
@@ -118,7 +115,6 @@ namespace Projeto_Inter
                 txtBairro.Text = funcionario.bairro;
                 txtCidade.Text = funcionario.cidade;
                 txtCargo.Text = funcionario.cargo;
-                //txtDepartamento.Text = funcionario.departamento;
                 txtDataCadastro.Text = funcionario.datacadastro.ToString();
             }
         }

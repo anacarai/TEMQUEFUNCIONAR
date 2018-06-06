@@ -13,6 +13,8 @@ namespace Projeto_Inter
 
         private requisicao requisicao = new requisicao();
 
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,7 +31,8 @@ namespace Projeto_Inter
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            
+            cadastro_produto produto = entity.cadastro_produto.Find(Convert.ToInt32(txtCodigo.Text));
+            txtDescricao.Text = produto.descricao.ToString();
         }
 
         protected void btnAdicionar_Click(object sender, EventArgs e)

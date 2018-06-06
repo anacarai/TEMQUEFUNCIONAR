@@ -15,7 +15,7 @@ namespace Projeto_Inter
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CarregarTabela();
         }
 
         public void LimparCampos()
@@ -52,9 +52,8 @@ namespace Projeto_Inter
             fornecedor.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
 
             entity.cadastro_fornecedor.Add(fornecedor);
-
             entity.SaveChanges();
-
+            CarregarTabela();
             LimparCampos();
         }
 
@@ -65,8 +64,8 @@ namespace Projeto_Inter
 
         public void CarregarTabela()
         {
-            List<cadastro_funcionario> funcionario = entity.cadastro_funcionario.ToList();
-            GridView1.DataSource = funcionario;
+            List<cadastro_fornecedor> fornecedor = entity.cadastro_fornecedor.ToList();
+            GridView1.DataSource = fornecedor;
             GridView1.DataBind();
         }
 

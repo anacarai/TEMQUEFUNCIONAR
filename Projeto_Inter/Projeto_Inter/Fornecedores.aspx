@@ -37,9 +37,6 @@
     <asp:Label ID="Label9" runat="server" Text="CEP"></asp:Label>
     <asp:TextBox ID="txtCEP" runat="server" CssClass="form-control"></asp:TextBox>
     <br />
-    <asp:Label ID="Label1" runat="server" Text="CEP"></asp:Label>
-    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-    <br />
 
     <div class="row">
     <div class="col-4">
@@ -107,8 +104,8 @@
     </div></div>
     <br />
     <br />
-    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" />
-    <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
+    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click" />
+    <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" OnClick="btnNovo_Click" />
         <br />
         <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" Width="100%">

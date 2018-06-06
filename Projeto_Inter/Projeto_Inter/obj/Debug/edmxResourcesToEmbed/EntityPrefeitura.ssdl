@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="razaosocial" Type="varchar" MaxLength="60" Nullable="false" />
     <Property Name="cnpj" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="inscricaoest" Type="varchar" MaxLength="15" Nullable="false" />
@@ -16,14 +16,14 @@
     <Property Name="complemento" Type="varchar" MaxLength="50" />
     <Property Name="bairro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="cidade" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="departamento" Type="varchar" MaxLength="50" />
     <Property Name="datacadastro" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="cadastro_funcionario">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="cpf" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="rg" Type="varchar" MaxLength="50" Nullable="false" />
